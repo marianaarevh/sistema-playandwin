@@ -1,4 +1,4 @@
-//#region Modelos)
+//#region Modelos
 
 class VideoGame {
 
@@ -46,5 +46,34 @@ const videogame3 =
 const videogamesList = [videogame1, videogame2, videogame3];
   
   //#endregion
-  
+
+//#region despliegue tabla
+
+function displayTable(games) {
+    const tablaBody = document.getElementById('data-table-body');
+
+    const imagePath = `../assets/img/catalogo/`;
+
+    games.forEach(game => {
+
+      const row = document.createElement('tr');
+
+      row.innerHTML = `
+        <td> ${game.id} </td>
+        <td> <img src="${imagePath + game.image}" alt="${game.name}" width="100"> </td>
+        <td>${game.name}</td>
+        <td>${game.description}</td>
+        <td>${game.category}</td>
+        <td>${game.price}</td>
+      `;
+
+      tablaBody.appendChild(row);
+
+    });
+}
+
+// #endregion
+
+displayTable(videogamesList);
+
   
