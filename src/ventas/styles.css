@@ -1,0 +1,71 @@
+:root {
+    --base-color: #FFFDF9;
+    --boring-color: rgb(235, 235, 234) ;
+    --dark-base-color: black;
+    --main-color: rgb(255, 63, 69);
+    --accent-color: rgb(0, 179, 255);    
+}
+
+
+#filter-form {
+    background-color: var(--boring-color);
+    padding: 15px;
+    margin: 0px 15px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+#filter-section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#filter-section h2 {
+    padding: 5px;
+    margin: 0px 3px;
+}
+
+.filter-field, #apply-filters, #reset-filters {
+    padding:5px;
+    margin: 5px;
+    border-radius: 5px;
+    border-width: 0px;
+    width: 200px;
+}
+
+#filter-section button {
+    background-color: var(--accent-color);
+    color: var(--base-color);
+}
+
+#ventas {
+    display: flex;
+}
+
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+
+  th {
+    padding: 15px;
+  }
+
+  tbody td {
+    white-space: wrap;
+  }
+
+  tbody img {
+    max-width: 100px;
+    height: auto;
+  }
+  
