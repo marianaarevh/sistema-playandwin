@@ -1,10 +1,13 @@
 /* #region General */
 :root {
-    --base-color: white;
+    --base-color: #FFFDF9;
+    --boring-color: rgb(235, 235, 234) ;
     --dark-base-color: black;
-    --main-color: rgb(255, 63, 69);
-    --accent-color: rgb(0, 179, 255);    
-
+    --main-color: rgb(0, 179, 255); 
+    --second-color: rgb(69, 186, 54); 
+    --third-color: rgb(252, 29, 37);
+    --fourth-color: rgb(249, 122, 19);   
+   
 }
 
 * {
@@ -13,7 +16,7 @@
 }
 
 body{
-    background-color: var(--accent-color);
+    background-color: var(--main-color);
     margin: 10px;
     padding: 10px;
 }
@@ -92,9 +95,11 @@ nav li a{
 
 nav li:hover a{
     color: var(--main-color);
+    font-weight: 600;
 }
 
 /* #endregion */
+
 
 /* #region NavBar */
 
