@@ -50,6 +50,9 @@ const videogamesList = [videogame1, videogame2, videogame3];
 //#region despliegue tabla
 
 function displayTable(games) {
+
+    clearTable();
+
     const tablaBody = document.getElementById('data-table-body');
 
     const imagePath = `../assets/img/catalogo/`;
@@ -74,6 +77,57 @@ function displayTable(games) {
 
 // #endregion
 
+function clearTable() {
+    const tableBody = document.getElementById('data-table-body');
+  
+    tableBody.innerHTML = '';
+  }
+
+//#region Filtrado
+
+// inicializar eventos de los botones del filtro
+function initButtonsHandler() {
+
+    document.getElementById('filter-form').addEventListener('submit', event => {
+      event.preventDefault();
+      applyFilters();
+    });
+  
+    document.getElementById('reset-filters').addEventListener('click', () => {
+      document.querySelectorAll('input.filter-field').forEach(input => input.value = '');
+      applyFilters();
+    });
+  
+  }
+  
+  
+  // aplicacion del filtro a los datos y despliegue
+  function applyFilters() {
+    const filterText = document.getElementById('text').value.toLowerCase();
+    const filterCategory = document.getElementById('category').value.toLowerCase();
+    const filterMinPrice = parseFloat(document.getElementById('price-min').value);
+    const filterMaxPrice = parseFloat(document.getElementById('price-max').value);
+  
+    const filteredGames = filterGames(videogamesList, filterText, filterCategory, filterMinPrice, filterMaxPrice);
+  
+    displayTable(filteredGames);
+  }
+  
+  
+  // logica para filtrar
+  function filterGames(games, text, category, minPrice, maxPrice) {
+  
+    return games.filter( game =>
+        (!text     || game.name.toLowerCase().includes(text) || game.description.toLowerCase().includes(text)) &&
+        (!category || game.category.toLowerCase().includes(category)) &&
+        (!minPrice || game.price >= minPrice) &&
+        (!maxPrice || game.price <= maxPrice)
+      );
+  }
+  
+  //#endregion
+
 displayTable(videogamesList);
+initButtonsHandler();
 
   
