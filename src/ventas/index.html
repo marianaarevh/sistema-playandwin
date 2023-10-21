@@ -33,10 +33,9 @@
   <main>
     <h1>Ventas de Videojuegos</h1>
     <section id="ventas">
-
         <form id="filter-form">
             <div id="filter-section">
-                <select id="videogame-filter" class="filter-field" placeholder="Videojuego(s)">
+                <select id="videogame-filter" class="filter-field" placeholder="Videojuego">
                     <option value="" selected>Todos los videojuegos</option>
                     <!-- intentar mostrar opciones dinámicamente -->
                 </select>
@@ -52,6 +51,9 @@
         </form>
 
         <br>
+
+        <div id="contenedor-btn">
+          <button id="addSale" class="btn-action">Nueva Venta</button>
 
         <div class="table-container">
 
@@ -72,6 +74,46 @@
                 </tbody>
             </table>
         </div>
+      </div>
+
+
+      <!-- Modal -->
+      <div id="modalBackground" class="modal-background">
+
+      </div>
+  
+      <div id="modal" class="modal">
+  
+        <h2>NUEVA VENTA</h2>
+  
+        <form id="sale-form" class="form-section">
+  
+          <label for="customer">Cliente:</label>
+          <input type="text" id="customer" class="form-field" placeholder="Nombre del cliente" required>
+  
+          <label for="videogame">Videojuego:</label>
+          <select id="videogame" class="form-field" required>
+            <option value="" selected>Todos los videojuegos</option>
+                    <!-- intentar mostrar opciones dinámicamente -->
+          </select>
+  
+          <label for="salePrice">Precio de Venta:</label>
+          <input type="number" id="salePrice" class="form-field" placeholder="Precio" required>
+  
+          <label for="saleDate">Fecha de Venta:</label>
+          <input type="date" id="saleDate" class="form-field" required>
+  
+          <label for="salesman">Vendedor:</label>
+          <input type="text" id="salesman" placeholder="Nombre del Vendedor" required>
+  
+          <label for="notes">Notas:</label>
+          <textarea id="notes" class="form-field" placeholder="Detalles de la venta" required></textarea>
+  
+          <button type="submit" class="btn-submit">Guardar Venta</button>
+  
+        </form>
+  
+      </div>
 
     </section>
 </main>

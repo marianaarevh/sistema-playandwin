@@ -1,3 +1,18 @@
 #ventas {
     display: flex;
 }
+#contenedor-btn{
+    display: flex;
+    flex-direction: column;
+}
+#addSale {
+    padding:5px;
+    margin: 5px;
+    border-radius: 5px;
+    border-width: 0px;
+    width: 120px;
+}
+
+.modal {
+    display: none;
+}
