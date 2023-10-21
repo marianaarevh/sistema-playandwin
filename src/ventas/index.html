@@ -29,11 +29,54 @@
     </nav>
   </header>
 
+
   <main>
+    <h1>Ventas de Videojuegos</h1>
+    <section id="ventas">
 
-    <h1>Ventas</h1>
+        <form id="filter-form">
+            <div id="filter-section">
+                <select id="videogame-filter" class="filter-field" placeholder="Videojuego(s)">
+                    <option value="" selected>Todos los videojuegos</option>
+                    <!-- intentar mostrar opciones dinámicamente -->
+                </select>
+                <input type="text" id="text" placeholder="Nombre del Cliente" class="filter-field">
+                <input type="text" id="text" placeholder="Nombre del Vendedor" class="filter-field">
+                <input type="number" id="sale-total-min" placeholder="Venta Total Mínima" class="filter-field">
+                <input type="number" id="sale-total-max" placeholder="Venta Total Máxima" class="filter-field">
+                <input type="date" id="date-filter" placeholder="Fecha de Venta" class="filter-field">
 
-  </main>
+                <button type="submit" id="apply-filters">Aplicar filtros</button>
+                <button type="reset" id="reset-filters">Restablecer</button>
+            </div>
+        </form>
+
+        <br>
+
+        <div class="table-container">
+
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>No. Venta</th>
+                        <th>Cliente</th>
+                        <th>Videojuego</th>
+                        <th>Vendedor</th>
+                        <th>Fecha de Venta</th>
+                        <th>Venta Total</th>
+                    </tr>
+                </thead>
+                <tbody id="data-table-body">
+                    <!-- Aquí se generará la tabla dinámicamente -->
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+</main>
+
+<script src="./script.js"></script>
 
 </body>
 
