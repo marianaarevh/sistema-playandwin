@@ -33,8 +33,50 @@
 
     <h1>Catalogo</h1>
 
+    <div id="catalogo">
+    <form id="filter-form">
+        
+        <div id="filter-section">
+        <h2>Filtros</h2>
+          <input type="text"   id="text" placeholder="Nombre o descripción" class="filter-field">
+          <input type="text" id="category" placeholder="Categoria" class="filter-field">
+          <input type="number" id="price-min" placeholder="Precio mínimo" class="filter-field">
+          <input type="number" id="price-max" placeholder="Precio máximo" class="filter-field">
+  
+          <button type="submit" id="apply-filters">Aplicar filtros</button>
+          <button type="reset" id="reset-filters">Restablecer</button>
+        </div>
+      </form>
+  
+      <br>
+  
+      <div class="table-container">
+  
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Categoria</th>
+              <th>Precio (USD)</th>
+            </tr>
+          </thead>
+          <tbody id="data-table-body">
+            <!-- Aquí se generará la tabla dinámicamente -->
+          </tbody>
+        </table>
+  
+      </div>
+    </div>
+
   </main>
 
+  <script src="./script.js"> </script>
+
+
 </body>
+
 
 </html>
