@@ -3,19 +3,14 @@
 <head>
   <link rel="icon" type="image/x-icon" href="../assets/img/playandwin-logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../assets/css/styles.css" />
   <link rel="stylesheet" type="text/css" href="../catalogo/styles.css" />
-
-  <title> Play & Win - Catalogo </title>
+  <title>Play & Win - Catálogo</title>
 </head>
 <body>
-
   <header>
     <a id="logo" href="../index.html">
         <img src="../assets/img/playandwin-text.png" title="Play&Win">
@@ -23,39 +18,30 @@
     <nav>
       <ul>
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../catalogo/index.html">Catalogo</a></li>
+        <li><a href="../catalogo/index.html">Catálogo</a></li>
         <li><a href="../ventas/index.html">Ventas</a></li>
       </ul>
     </nav>
   </header>
-
   <main>
-
-    <h1>Catalogo</h1>
-
+    <h1>Catálogo</h1>
     <div id="catalogo">
     <form id="filter-form" class="form-section">
-        
         <div id="filter-section">
         <h2>Filtros</h2>
-
           <select id="text" class="form-field" placeholder="Nombre o descripción">
              <option value="" selected>Nombre del juego</option>
              <!-- Llenaremos las opciones con datos consumidos desde una api -->
           </select>
-          <input type="text" id="category" placeholder="Categoria" class="form-field">
+          <input type="text" id="category" placeholder="Categoría" class="form-field">
           <input type="number" id="price-min" placeholder="Precio mínimo" class="form-field">
           <input type="number" id="price-max" placeholder="Precio máximo" class="form-field">
-  
           <button type="submit" id="apply-filters">Aplicar filtros</button>
           <button type="reset" id="reset-filters">Restablecer</button>
         </div>
       </form>
-  
       <br>
-  
       <div class="table-container">
-  
         <table id="data-table">
           <thead>
             <tr>
@@ -63,7 +49,7 @@
               <th>Imagen</th>
               <th>Nombre</th>
               <th>Descripción</th>
-              <th>Categoria</th>
+              <th>Categoría</th>
               <th>Precio (USD)</th>
             </tr>
           </thead>
@@ -71,16 +57,12 @@
             <!-- Aquí se generará la tabla dinámicamente -->
           </tbody>
         </table>
-  
+      </div>
+      <div id="message-not-found" style="display: none;">
+        <p>No se encontraron juegos con el filtro proporcionado.</p>
       </div>
     </div>
-
   </main>
-
-  <script src="./script.js"> </script>
-
-
+  <script src="./script.js"></script>
 </body>
-
-
 </html>
