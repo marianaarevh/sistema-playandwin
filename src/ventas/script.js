@@ -2,12 +2,12 @@
 
 // Definimos la clase Sale
 class Venta {
-    constructor(id, customerName, saleDate, salesman, videogame, salePrice, notes) {
+    constructor(id, customerName,videogame, salesman, saleDate, salePrice, notes) {
       this.id = id;
       this.customerName = customerName;
-      this.saleDate = saleDate;
-      this.salesman = salesman;
       this.videogame = videogame; 
+      this.salesman = salesman;
+      this.saleDate = saleDate;
       this.salePrice = salePrice;
       this.notes = notes;
     }
@@ -99,13 +99,13 @@ class Venta {
    const notes = document.getElementById('notes').value;
   
   
-    const saleToSave = new Sale(
+    const saleToSave = new Venta(
       null,
       customerName,
       videogame,
-      salePrice,
-      saleDate,
       salesman,
+      saleDate,
+      salePrice,
       notes
     );
   
@@ -170,8 +170,7 @@ function deleteSale(saleId) {
 
   }
 }
-//#endregion 
-  
+//#endregion   
   //#region CONTROLADOR
   initAddSaleButtonHandler();
 

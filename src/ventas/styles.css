@@ -41,7 +41,13 @@
     flex-direction: column;
     background-color: var(--boring-color);
     border-radius: 10px;
+    padding: 10px;
 
+}
+
+.form-section button {
+    background-color: var(--second-color);
+    color: var(--base-color);
 }
 
     

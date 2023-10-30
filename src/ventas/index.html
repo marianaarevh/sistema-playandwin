@@ -38,11 +38,12 @@
         <form id="filter-form">
             <div id="filter-section">
                 <select id="videogame-filter" class="filter-field" placeholder="Videojuego">
-                    <option value="" selected>Todos los videojuegos</option>
+                    <option value="Todos los Videojuegos" selected>Todos los videojuegos</option>
+                    <option value="Overwatch">Overwatch</option>
                     <!-- intentar mostrar opciones dinámicamente -->
                 </select>
-                <input type="text" id="text" placeholder="Nombre del Cliente" class="filter-field">
-                <input type="text" id="text" placeholder="Nombre del Vendedor" class="filter-field">
+                <input type="text" id="costumer-text" placeholder="Nombre del Cliente" class="filter-field">
+                <input type="text" id="salesman-text" placeholder="Nombre del Vendedor" class="filter-field">
                 <input type="number" id="sale-total-min" placeholder="Venta Total Mínima" class="filter-field">
                 <input type="number" id="sale-total-max" placeholder="Venta Total Máxima" class="filter-field">
                 <input type="date" id="date-filter" placeholder="Fecha de Venta" class="filter-field">
@@ -96,7 +97,8 @@
   
           <label for="videogame">Videojuego:</label>
           <select id="videogame" class="form-field" required>
-            <option value="" selected>Todos los videojuegos</option>
+            <option value="Todos los Videojuegos" selected>Todos los videojuegos</option>
+            <option value="Overwatch">Overwatch</option>
                     <!-- intentar mostrar opciones dinámicamente -->
           </select>
   
@@ -107,7 +109,7 @@
           <input type="date" id="saleDate" class="form-field" required>
   
           <label for="salesman">Vendedor:</label>
-          <input type="text" id="salesman" placeholder="Nombre del Vendedor" required>
+          <input type="text" id="salesman" placeholder="Nombre del Vendedor" class="form-field" required>
   
           <label for="notes">Notas:</label>
           <textarea id="notes" class="form-field" placeholder="Detalles de la venta" required></textarea>

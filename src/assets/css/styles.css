@@ -122,7 +122,7 @@ nav li:hover a{
     margin: 0px 3px;
 }
 
-#apply-filters, #reset-filters, .form-field {
+button, #apply-filters, #reset-filters, .form-field, .filter-field{
     padding:5px;
     margin: 5px;
     border-radius: 5px;
