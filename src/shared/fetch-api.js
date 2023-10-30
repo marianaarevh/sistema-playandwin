@@ -1,4 +1,4 @@
-const apiURL = 'https://65337693d80bd20280f6823e.mockapi.io/';
+const apiURL = 'https://65337693d80bd20280f6823e.mockapi.io';
 
 
 function fetchAPI(url, method = 'GET', data = null) {
